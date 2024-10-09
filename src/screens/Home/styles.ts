@@ -1,5 +1,5 @@
+import { SafeAreaView } from 'react-native-safe-area-context';
 import styled from 'styled-components/native';
-import {SafeAreaView} from 'react-native-safe-area-context'
 
 export const Container = styled(SafeAreaView)`
   flex: 1;
@@ -42,4 +42,3 @@ export const Title = styled.Text`
   font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
   font-weight: 700;
 `;
-
