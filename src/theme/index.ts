@@ -8,6 +8,7 @@ export default {
     RED_DARK: '#AA2834',
     BLUE_700: '#1E3A8A',
     BLUE_500: '#3B82F6',
+    BLUE_400: '#4876BB',
     BLUE_LIGHT: '#93C5FD',
     YELLOW_700: '#F59E0B',
     YELLOW_500: '#FBBF24',

@@ -3,24 +3,12 @@ import styled from 'styled-components/native';
 
 export const Container = styled(SafeAreaView)`
   flex: 1;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
   padding: ${({ theme }) => theme.SPACING.MD}px;
 `;
 
-export const Input = styled.TextInput`
-  width: 100%;
-  padding: ${({ theme }) => theme.SPACING.MD}px;
-  margin-bottom: ${({ theme }) => theme.SPACING.SM}px;
-  border-radius: ${({ theme }) => theme.BORDER_RADIUS.SM}px;
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_INPUTS};
-  color: ${({ theme }) => theme.COLORS.COLOR_INPUTS};
-  font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
-  border: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
-`;
-
-export const SubmitButton = styled.TouchableOpacity`
+export const SaleButton = styled.TouchableOpacity`
   width: 100%;
   padding: ${({ theme }) => theme.SPACING.MD}px;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.MD}px;
@@ -36,7 +24,9 @@ export const ButtonText = styled.Text`
 `;
 
 export const Title = styled.Text`
-
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-bottom: 20px;
   color: ${({ theme }) => theme.COLORS.TITLES};
   font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
