@@ -1,10 +1,14 @@
 import {NavigationContainer} from '@react-navigation/native'
-import { PublicRoutes } from './public.routes'
+import { PublicRoutes } from './publics'
+import { useState } from 'react'
+import { PrivateRoutes } from './privates'
+
 
 export function Routes() {
+    const isAuthenticated = useState(true)
     return (
         <NavigationContainer>
-            <PublicRoutes/>
+            { !isAuthenticated ? <PublicRoutes/>: <PrivateRoutes/>}
         </NavigationContainer>
     )
 }

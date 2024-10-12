@@ -11,7 +11,6 @@ interface LayoutProps {
 export function AppLayout({ children, isMenuDrawerVisible }: LayoutProps) {
   return (
     <Container>
-      <Header isMenuDrawerVisible={isMenuDrawerVisible} />
       {children}
       <StatusBar style="auto" />
     </Container>

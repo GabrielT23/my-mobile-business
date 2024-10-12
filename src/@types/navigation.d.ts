@@ -4,6 +4,8 @@ export declare global {
             login: undefined;
             home: undefined;
             clientSelect: undefined;
+            settings: undefined;
+            salesRoutes: undefined;
         }
     }
 }
