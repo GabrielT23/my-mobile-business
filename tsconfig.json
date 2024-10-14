@@ -16,6 +16,9 @@
       "@components/*": [
         "./src/components/*"
       ],
+      "@contexts/*": [
+        "./src/contexts/*"
+      ],
       "@routes/*": [
         "./src/routes/*"
       ]

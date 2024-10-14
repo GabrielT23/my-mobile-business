@@ -4,12 +4,14 @@ import logo from '@assets/logo3x.png'
 import { TextInput, Button, ImageComponent, Image } from 'react-native';
 import { Container, Input, SubmitButton, ButtonText, Title } from './styles';
 import { useNavigation } from '@react-navigation/native';
+import { useAuthProvider } from '@contexts/AuthContext';
 
 export default function Login() {
-  const navigation = useNavigation();
+  const {setIsAuthenticated} = useAuthProvider();
   function handleLoginUser() {
-    navigation.navigate('home');
+    setIsAuthenticated(true);
   }
+
   return (
     <Container>
       <Image style= {{marginBottom: 20}} source={logo}/>
