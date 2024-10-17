@@ -14,6 +14,7 @@ module.exports = function(api) {
             '@components': './src/components',
             '@contexts': './src/contexts',
             '@screens': './src/screens',
+            '@dtos': './src/dtos',
           }
         }
       ]

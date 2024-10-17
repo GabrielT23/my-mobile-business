@@ -4,6 +4,7 @@ import styled from 'styled-components/native';
 export const Container = styled(SafeAreaView)`
   flex: 1;
   height: 100%;
+  overflow: scroll;
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
   padding: ${({ theme }) => theme.SPACING.XS}px;
 `;

@@ -19,6 +19,9 @@
       "@contexts/*": [
         "./src/contexts/*"
       ],
+      "@dtos/*": [
+        "./src/dtos/*"
+      ],
       "@routes/*": [
         "./src/routes/*"
       ]

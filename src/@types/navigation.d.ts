@@ -6,6 +6,10 @@ export declare global {
             clientSelect: undefined;
             settings: undefined;
             salesRoutes: undefined;
+            clientSale: {
+                clientName: string
+            };
+            clientsList: undefined;
         }
     }
 }

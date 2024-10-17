@@ -6,6 +6,7 @@ export default {
 
     RED: '#F75A68',
     RED_DARK: '#AA2834',
+    BLUE_800: '#001E87',
     BLUE_700: '#1E3A8A',
     BLUE_500: '#3B82F6',
     BLUE_400: '#4876BB',
@@ -24,7 +25,7 @@ export default {
     GRAY_400: '#323238',
     GRAY_300: '#7C7C8A',
     GRAY_200: '#C4C4CC',
-    GRAY_100: '#E1E1E6',
+    GRAY_100: '#E8E8EE',
 
     BLACK: '#000000',
 
@@ -40,7 +41,8 @@ export default {
 
 
     // INPUTS
-    BACKGROUND: '#FFFFFF',
+    BACKGROUND: '#FAFAFF',
+    BACKGROUND_TABLE: '#F2F2F2',
     BACKGROUND_INPUTS: '#CACAD6',
     COLOR_INPUTS: '#0D0D0D',
 
@@ -53,7 +55,7 @@ export default {
   },
   FONT_FAMILY: {
     REGULAR: 'Roboto_400Regular',
-    BOLD: 'Roboto_500Bold',
+    BOLD: 'Roboto_700Bold',
     MEDIUM: 'Roboto_500Medium',
     LIGHT: 'Roboto_300Light',
   },
