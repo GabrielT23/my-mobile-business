@@ -26,4 +26,3 @@ export const ButtonIcon = styled.TouchableOpacity`
   border-radius: 5px;
   margin-left: 5px;
 `;
-

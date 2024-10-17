@@ -11,7 +11,8 @@ import Home from "@screens/Home";
 import logo from "@assets/logo.png";
 import Settings from "@screens/settings";
 import { SaleRoutes } from "./sale.routes";
-import ClientList from "@screens/ClientsList";
+import ClientsList from "@screens/ClientsList";
+import ProductsList from "@screens/ProductsList";
 
 const { Navigator, Screen } = createDrawerNavigator();
 
@@ -68,9 +69,16 @@ export function PrivateRoutes() {
       />
       <Screen
         name="clientsList"
-        component={ClientList}
+        component={ClientsList}
         options={{
           title: "Clientes",
+        }}
+      />
+      <Screen
+        name="productsList"
+        component={ProductsList}
+        options={{
+          title: "Produtos",
         }}
       />
     </Navigator>

@@ -1,34 +1,51 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
 import styled from 'styled-components/native';
 
-export const Container = styled(SafeAreaView)`
-  flex: 1;
-  height: 100%;
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
-  padding: ${({ theme }) => theme.SPACING.MD}px;
+export const Title = styled.Text`
+  padding-left: 40px;
+  font-size: 20px;
+  text-align: start;
+  font-weight: bold;
+  width: 100%;
+  color: #333;
+  margin-bottom: 20px;
 `;
 
-export const SaleButton = styled.TouchableOpacity`
+export const InfoSection = styled.View`
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  align-items: center;
+`;
+
+export const InfoText = styled.Text`
+  padding-left: 40px;
+  font-size: 16px;
   width: 100%;
-  padding: ${({ theme }) => theme.SPACING.MD}px;
-  border-radius: ${({ theme }) => theme.BORDER_RADIUS.MD}px;
-  background-color: ${({ theme }) => theme.COLORS.PRIMARY};
-  justify-content: center;
+  color: #555;
+  margin-bottom: 10px;
+`;
+
+export const OptionsSection = styled.View`
+  margin-bottom: 20px;
+  align-items: center;
+`;
+
+export const OptionButton = styled.TouchableOpacity`
+  background-color: ${({ theme }) => theme.COLORS.GRAY_300};
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
+  margin-bottom: 15px;
   align-items: center;
 `;
 
 export const ButtonText = styled.Text`
-  color: ${({ theme }) => theme.COLORS.TEXTS};
-  font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
-  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
 `;
 
-export const Title = styled.Text`
-  text-align: center;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-bottom: 20px;
-  color: ${({ theme }) => theme.COLORS.TITLES};
-  font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
-  font-weight: 700;
+export const LogoutButton = styled(OptionButton)`
+  background-color: ${({ theme }) => theme.COLORS.RED_DARK};
+  width: 50%;
 `;

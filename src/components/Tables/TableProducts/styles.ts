@@ -1,5 +1,6 @@
 import styled from "styled-components/native";
 
+
 export const TableContainer = styled.View`
   flex-direction: row;
   height: fit-content;
@@ -14,6 +15,7 @@ export const TableColumn = styled.View`
 export const TextCell = styled.Text`
   text-align: center;
   min-height: 25px;
+  
 `;
 
 export const TextHeader = styled.Text`
@@ -37,9 +39,4 @@ export const TableCell = styled.View`
   border-width: 0.5px;
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   border-color: ${({ theme }) => theme.COLORS.GRAY_300};
-`;
-
-export const TableRow = styled.View`
-  flex-direction: row;
-  width: 100%;
 `;

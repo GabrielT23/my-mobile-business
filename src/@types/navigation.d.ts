@@ -10,6 +10,7 @@ export declare global {
                 clientName: string
             };
             clientsList: undefined;
+            productsList: undefined;
         }
     }
 }

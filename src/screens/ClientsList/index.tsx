@@ -3,15 +3,9 @@ import { View, TextInput, FlatList, TouchableOpacity, Text } from 'react-native'
 import { AppLayout } from '@layouts/AppLayout';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components';
-import { Container, SearchArea, SearchInput, ButtonIcon, TableHeader, TableRow, TableCell, EyeButton } from './styles';
+import { Container, SearchArea, SearchInput, ButtonIcon } from './styles';
 import { TableClients } from '@components/Tables/TableClients';
-
-interface Client {
-  id: number;
-  name: string;
-  balance: number;
-  lastDate: string;
-}
+import { Client } from '@dtos/clients';
 
 export default function ClientList() {
   const theme = useTheme();
@@ -20,15 +14,24 @@ export default function ClientList() {
     { id: 1, name: 'João Silva', balance: 5000000000, lastDate: '2024-10-10' },
     { id: 2, name: 'Maria Souza', balance: 120, lastDate: '2024-10-09' },
     { id: 3, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 4, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 5, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 6, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 7, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 8, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 9, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 10, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 11, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 12, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 13, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
+    { id: 14, name: 'Carlos Pereira', balance: 300, lastDate: '2024-10-08' },
   ]);
 
   const handleAddClient = () => {
-    // Função para adicionar cliente
     console.log('Adicionar Cliente');
   };
 
   const handleFilterClients = () => {
-    // Função para filtrar clientes
     console.log('Filtrar Clientes');
   };
 
@@ -36,18 +39,6 @@ export default function ClientList() {
     console.log(`Ver detalhes do cliente com ID: ${clientId}`);
   };
 
-  const renderClientItem = ({ item }: { item: Client }) => (
-    <TableRow>
-      <TableCell>{item.name}</TableCell>
-      <TableCell>{`R$ ${item.balance}`}</TableCell>
-      <TableCell>{item.lastDate}</TableCell>
-      <TableCell>
-        <EyeButton onPress={() => handleViewDetails(item.id)}>
-        <MaterialIcons size={30} color={theme.COLORS.BLUE_800} name="remove-red-eye" />
-        </EyeButton>
-      </TableCell>
-    </TableRow>
-  );
 
   return (
     <AppLayout>

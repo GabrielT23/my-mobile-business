@@ -14,7 +14,7 @@ import {
 } from "./styles";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useTheme } from "styled-components";
-import { useRoute, RouteProp } from "@react-navigation/native";
+import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 import { CardItemSale } from "@components/CardItemSale";
 import { ButtonAdd } from "@components/Buttons/ButtonAdd";
 import { ButtonSubmit } from "@components/Buttons/ButtonSubmit";
@@ -33,6 +33,7 @@ type ClientSaleRouteProp = RouteProp<
 
 export default function ClientSale() {
   const theme = useTheme();
+  const navigation = useNavigation();
   const route = useRoute<ClientSaleRouteProp>();
   const { clientName } = route.params;
 
@@ -60,7 +61,7 @@ export default function ClientSale() {
 
   const handleViewDetails = (itemName: string) => {
     console.log(`Visualizar detalhes do item: ${itemName}`);
-  };
+  }
 
   const [isProductModalVisible, setProductModalVisible] = useState(false);
   const [isServiceModalVisible, setServiceModalVisible] = useState(false);
@@ -96,7 +97,6 @@ export default function ClientSale() {
   return (
     <>
       <AppLayout>
-        {/* ScrollView apenas para as seções sem FlatList */}
         <ScrollView>
           <Content>
             <Title>Adicionar os Produtos e Serviços de Venda</Title>
@@ -113,12 +113,11 @@ export default function ClientSale() {
               <SaleAreaView>
                 <ItemsAreaView>
                   <SubTitle>Produtos</SubTitle>
-                  {/* FlatList fora do ScrollView */}
                   <FlatList
                     data={products}
                     keyExtractor={(item) => item.id.toString()}
                     renderItem={renderProductItem}
-                    scrollEnabled={false} // desabilitar scroll dentro da FlatList
+                    scrollEnabled={false}
                   />
                   <ButtonAdd
                     style={{ width: 150, marginTop: 10 }}
@@ -129,12 +128,11 @@ export default function ClientSale() {
 
                 <ItemsAreaView>
                   <SubTitle>Serviços</SubTitle>
-                  {/* FlatList fora do ScrollView */}
                   <FlatList
                     data={services}
                     keyExtractor={(item) => item.id.toString()}
                     renderItem={renderServiceItem}
-                    scrollEnabled={false} // desabilitar scroll dentro da FlatList
+                    scrollEnabled={false}
                   />
                   <ButtonAdd
                     style={{ width: 150, marginTop: 10 }}
@@ -145,8 +143,8 @@ export default function ClientSale() {
               </SaleAreaView>
               <CardItemSale productName="Total" price={total} isTotal />
               <ButtonsAreaView>
-                <ButtonCancel style={{ width: 150 }} text="Cancelar" />
-                <ButtonSubmit style={{ width: 150 }} text="Finalizar" />
+                <ButtonCancel style={{ width: 150 }} text="Cancelar" onPress={() => navigation.navigate('clientSelect')}/>
+                <ButtonSubmit style={{ width: 150 }} text="Finalizar" onPress={() => navigation.navigate('home')}/>
               </ButtonsAreaView>
             </ClientAreaView>
           </Content>

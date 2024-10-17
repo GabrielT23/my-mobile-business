@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BaseModal } from '../BaseModal';
 import { Input, Title, SubmitButton } from './styles';
+import { ButtonSubmit } from '@components/Buttons/ButtonSubmit';
 
 interface AddServiceModalProps {
   visible: boolean;
@@ -34,7 +35,7 @@ export function AddServiceModal({ visible, onClose, setServices }: AddServiceMod
         onChangeText={setPrice}
         keyboardType="numeric"
       />
-      <SubmitButton title="Cadastrar" onPress={handleAddService} />
+      <ButtonSubmit text="Cadastrar" onPress={handleAddService} />
     </BaseModal>
   );
 }
